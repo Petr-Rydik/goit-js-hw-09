@@ -1,0 +1,43 @@
+.gallery {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery-item{
+    transition: opacity 350ms ease-in-out;
+}
+
+.gallery-item:hover{
+    transform: scale(1.1);
+    transition: transform 350ms linear;
+   
+}
+
+ul.gallery{
+    max-width: 1128px;
+    margin-left: 175px;
+}
+
+
+.container{
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+
+ .gallery-item:hover {
+     opacity: 1;
+ }
+
+ .gallery-item:hover~.gallery-item {
+     opacity: 0.6;
+ }
+
+ .gallery-item:hover .gallery-item:not(:hover) {
+     opacity: 0.6;
+ }
+
+ .gallery:hover .gallery-item:not(:hover) {
+     opacity: 0.6;
+ }
